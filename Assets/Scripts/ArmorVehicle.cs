@@ -3,6 +3,8 @@ using UnityEngine;
 public class ArmorVehicle : PlayerController // INHERITTANCE
 {
     [SerializeField] private GameObject armor;
+    [SerializeField] private GameObject firePoint;
+    [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private float armorSpeed = 50.0f;
     private float secondHorizontalInput;
 
@@ -20,8 +22,12 @@ public class ArmorVehicle : PlayerController // INHERITTANCE
         secondHorizontalInput = Input.GetAxis("Horizontal1");
 
         Move();
-        SpecialMove();
 
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            SpecialMove();
+        } 
+        
         if(Input.GetKeyDown(KeyCode.C))
         {
             SwitchCamera();
@@ -29,9 +35,15 @@ public class ArmorVehicle : PlayerController // INHERITTANCE
     }
 
     // POLYMORPHISM
-    protected override void SpecialMove()
+    protected override void Move()
     {
+        base.Move();
         // Spin the vehicle's armor to the right/left
         armor.transform.Rotate(Vector3.up * Time.deltaTime * armorSpeed * secondHorizontalInput);
+    }
+
+    protected override void SpecialMove()
+    {
+        Instantiate(projectilePrefab, firePoint.transform.position, firePoint.transform.rotation);
     }
 }

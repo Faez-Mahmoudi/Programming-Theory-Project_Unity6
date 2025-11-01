@@ -118,6 +118,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &5071039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5071040}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5071040
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5071039}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2.822}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 564297605}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,12 +418,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.078459114, y: 0, z: 0, w: 0.99691737}
+  m_LocalRotation: {x: 0.078459114, y: -0, z: -0, w: 0.99691737}
   m_LocalPosition: {x: 0, y: 4.5, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 876288605}
   m_LocalEulerAnglesHint: {x: 9, y: 0, z: 0}
 --- !u!114 &534669907
 MonoBehaviour:
@@ -401,7 +432,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ff2971b0b574dd47af29e10e6c3d428, type: 3}
   m_Name: 
@@ -452,6 +483,11 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!4 &564297605 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 496702, guid: aea2a6cdcc9d7944090d528486ebaee1, type: 3}
+  m_PrefabInstance: {fileID: 876288593}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &841097634 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 141022, guid: aea2a6cdcc9d7944090d528486ebaee1, type: 3}
@@ -517,9 +553,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 489324, guid: aea2a6cdcc9d7944090d528486ebaee1, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 534669905}
     - targetCorrespondingSourceObject: {fileID: 459108, guid: aea2a6cdcc9d7944090d528486ebaee1, type: 3}
       insertIndex: 0
       addedObject: {fileID: 1730358597}
+    - targetCorrespondingSourceObject: {fileID: 496702, guid: aea2a6cdcc9d7944090d528486ebaee1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5071040}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 104122, guid: aea2a6cdcc9d7944090d528486ebaee1, type: 3}
       insertIndex: -1
@@ -545,11 +587,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ade4df366baf6bf459313554e0b87be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  m_Speed: 20
   turnSpeed: 45
   mainCamera: {fileID: 534669904}
   hoodCamera: {fileID: 1730358592}
   armor: {fileID: 841097634}
+  firePoint: {fileID: 5071039}
+  projectilePrefab: {fileID: 6546126370427914869, guid: 57e3e27c23dc85e4b801cab2297d7996, type: 3}
   armorSpeed: 50
 --- !u!54 &876288601
 Rigidbody:
@@ -578,6 +622,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!4 &876288605 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 489324, guid: aea2a6cdcc9d7944090d528486ebaee1, type: 3}
+  m_PrefabInstance: {fileID: 876288593}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &974359749
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -970,7 +1019,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 534669905}
   - {fileID: 170076735}
   - {fileID: 1385500138}
   - {fileID: 876288593}
