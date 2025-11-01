@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public abstract class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float speed = 20.0f;
-    [SerializeField] private float turnSpeed = 45.0f;
+    [SerializeField] protected float speed = 20.0f;
+    [SerializeField] protected float turnSpeed = 45.0f;
     protected float horizontalInput;
     protected float forwardInput;
 
@@ -16,28 +16,16 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        horizontalInput = Input.GetAxis("Horizontal");
-        forwardInput = Input.GetAxis("Vertical");
-
-        Move();
-
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            SwitchCamera();
-        } 
-    }
-
     // ABSTRACTION
     protected virtual void Move()
     {
-        // Move the vehicle forward
+        // Move the player forward
         transform.Translate(Vector3.forward * Time.deltaTime * forwardInput * speed);
-        // Rotate the vehicle to left and right
+        // Rotate the player to left and right
         transform.Rotate(Vector3.up * Time.deltaTime * horizontalInput * forwardInput * turnSpeed);
     }
+
+    protected abstract void SpecialMove();
 
     protected void SwitchCamera()
     {

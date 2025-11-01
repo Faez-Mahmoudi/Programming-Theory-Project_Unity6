@@ -452,6 +452,16 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1 &841097634 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 141022, guid: aea2a6cdcc9d7944090d528486ebaee1, type: 3}
+  m_PrefabInstance: {fileID: 876288593}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &841097635 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 459108, guid: aea2a6cdcc9d7944090d528486ebaee1, type: 3}
+  m_PrefabInstance: {fileID: 876288593}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &876288593
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -507,8 +517,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 489324, guid: aea2a6cdcc9d7944090d528486ebaee1, type: 3}
-      insertIndex: -1
+    - targetCorrespondingSourceObject: {fileID: 459108, guid: aea2a6cdcc9d7944090d528486ebaee1, type: 3}
+      insertIndex: 0
       addedObject: {fileID: 1730358597}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 104122, guid: aea2a6cdcc9d7944090d528486ebaee1, type: 3}
@@ -539,6 +549,8 @@ MonoBehaviour:
   turnSpeed: 45
   mainCamera: {fileID: 534669904}
   hoodCamera: {fileID: 1730358592}
+  armor: {fileID: 841097634}
+  armorSpeed: 50
 --- !u!54 &876288601
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -566,11 +578,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!4 &876288605 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 489324, guid: aea2a6cdcc9d7944090d528486ebaee1, type: 3}
-  m_PrefabInstance: {fileID: 876288593}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &974359749
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -798,11 +805,11 @@ Transform:
   m_GameObject: {fileID: 1730358591}
   serializedVersion: 2
   m_LocalRotation: {x: 0.01745245, y: -0, z: -0, w: 0.99984777}
-  m_LocalPosition: {x: 0, y: 4.2, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0.6779854, z: 0.123607874}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 876288605}
+  m_Father: {fileID: 841097635}
   m_LocalEulerAnglesHint: {x: 2, y: 0, z: 0}
 --- !u!4 &2093379048 stripped
 Transform:
