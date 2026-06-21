@@ -1030,6 +1030,7 @@ MonoBehaviour:
   - {fileID: 585171389}
   - {fileID: 1420955084}
   rotationSpeed: 30
+  propler: {fileID: 1430720301}
 --- !u!114 &237527445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3664,6 +3665,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
+--- !u!1 &1430720297 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}
+  m_PrefabInstance: {fileID: 1476855773}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1430720301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430720297}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0ffb75d2062eb45ba599f6a90d6bc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1433765317
 GameObject:
   m_ObjectHideFlags: 0
@@ -3992,7 +4010,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1430720301}
   m_SourcePrefab: {fileID: 100100000, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}
 --- !u!1 &1530564940
 GameObject:
@@ -4863,6 +4884,7 @@ MonoBehaviour:
   - {fileID: 808495360}
   spotLights: []
   rotationSpeed: 30
+  propler: {fileID: 0}
 --- !u!1 &2129163723 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: af29f0ea7e5403641b3b244ede69c374, type: 3}

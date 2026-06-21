@@ -9,6 +9,7 @@ public class MenuUIHandler : MonoBehaviour
     [SerializeField] private List<GameObject> myCar;
     [SerializeField] private List<Light> spotLights;
     [SerializeField] private float rotationSpeed = 25;
+    [SerializeField] private PropellerSpiner propler;
 
     // Update is called once per frame
     void Update()
@@ -39,6 +40,7 @@ public class MenuUIHandler : MonoBehaviour
         SetRotation(2);
 
         SetLigh(0);
+        propler.enabled = false;
     }
 
     public void PlaneButton()
@@ -48,6 +50,7 @@ public class MenuUIHandler : MonoBehaviour
         SetRotation(2);
 
         SetLigh(1);
+        propler.enabled = true;
     }
 
     public void VehicleButton()
@@ -57,6 +60,7 @@ public class MenuUIHandler : MonoBehaviour
         SetRotation(1);
 
         SetLigh(2);
+        propler.enabled = false;
     }
 
     // ABSTRACTION
