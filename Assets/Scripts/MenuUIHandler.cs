@@ -7,6 +7,7 @@ public class MenuUIHandler : MonoBehaviour
 {
     [SerializeField] public TMP_InputField nameInputField;
     [SerializeField] private List<GameObject> myCar;
+    [SerializeField] private List<Light> spotLights;
     [SerializeField] private float rotationSpeed = 25;
 
     // Update is called once per frame
@@ -36,6 +37,8 @@ public class MenuUIHandler : MonoBehaviour
         MainManager.Instance.sceneNum = 1;
         SetRotation(1);
         SetRotation(2);
+
+        SetLigh(0);
     }
 
     public void PlaneButton()
@@ -43,6 +46,8 @@ public class MenuUIHandler : MonoBehaviour
         MainManager.Instance.sceneNum = 2;
         SetRotation(0);
         SetRotation(2);
+
+        SetLigh(1);
     }
 
     public void VehicleButton()
@@ -50,11 +55,22 @@ public class MenuUIHandler : MonoBehaviour
         MainManager.Instance.sceneNum = 3;
         SetRotation(0);
         SetRotation(1);
+
+        SetLigh(2);
     }
 
     // ABSTRACTION
     private void SetRotation(int n)
     {
         myCar[n].transform.rotation = new Quaternion(0, 180, 0, 0);
+    }
+
+    private void SetLigh(int n)
+    {
+        foreach (var light in spotLights)
+        {
+            light.enabled = false;
+        }
+        spotLights[n].enabled = true;
     }
 }
