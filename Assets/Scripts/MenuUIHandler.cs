@@ -2,6 +2,9 @@ using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.SceneManagement;
+# if UNITY_EDITOR
+using UnityEditor;
+# endif
 
 public class MenuUIHandler : MonoBehaviour
 {
@@ -76,5 +79,17 @@ public class MenuUIHandler : MonoBehaviour
             light.enabled = false;
         }
         spotLights[n].enabled = true;
+    }
+
+    public void Exit()
+    {
+    # if UNITY_EDITOR
+        EditorApplication.ExitPlaymode();
+    # else
+        Application.Quit();
+    # endif
+
+        //Saves the last bestScore and bestPlayerName
+        //MyManager.Instance.SaveScore();
     }
 }
