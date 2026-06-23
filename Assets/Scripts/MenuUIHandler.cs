@@ -15,11 +15,12 @@ public class MenuUIHandler : MonoBehaviour
     [SerializeField] private PropellerSpiner propler;
 
     private Animator carAnim;
+    [SerializeField] private Animator armorAnim;
 
     void Start()
     {
         carAnim = myCar[2].GetComponent<Animator>();
-
+        //armorAnim = myCar[0].GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -51,6 +52,7 @@ public class MenuUIHandler : MonoBehaviour
         SetRotation(2);
 
         SetLigh(0);
+        armorAnim.SetBool("isSelected", true);
         carAnim.SetBool("isSelected", false);
         propler.enabled = false;
     }
@@ -63,6 +65,8 @@ public class MenuUIHandler : MonoBehaviour
 
         SetLigh(1);
         carAnim.SetBool("isSelected", false);
+        armorAnim.SetBool("isSelected", false);
+
         propler.enabled = true;
     }
 
@@ -74,6 +78,8 @@ public class MenuUIHandler : MonoBehaviour
 
         SetLigh(2);
         carAnim.SetBool("isSelected", true);
+        armorAnim.SetBool("isSelected", false);
+
         propler.enabled = false;
     }
 
