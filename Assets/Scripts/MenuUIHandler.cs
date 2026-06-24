@@ -14,15 +14,12 @@ public class MenuUIHandler : MonoBehaviour
     [SerializeField] private float rotationSpeed = 25;
     [SerializeField] private PropellerSpiner propler;
 
-    private Animator carAnim;
-    private Animator planeAnim;
+    [SerializeField] private Animator carAnim;
+    [SerializeField] private Animator planeAnim;
     [SerializeField] private Animator armorAnim;
 
     void Start()
     {
-        carAnim = myCar[2].GetComponent<Animator>();
-        planeAnim = myCar[1].GetComponent<Animator>();
-
         chooseVehicleText.gameObject.SetActive(false);
 
         if(MainManager.Instance.sceneNum == 1)
@@ -55,10 +52,7 @@ public class MenuUIHandler : MonoBehaviour
         SetRotation(2);
 
         SetLigh(0);
-        armorAnim.SetBool("isSelected", true);
-        carAnim.SetBool("isSelected", false);
-        planeAnim.SetBool("isSelected", false);
-        propler.enabled = false;
+        SetAnim(true, false, false);
     }
 
     public void PlaneButton()
@@ -68,11 +62,7 @@ public class MenuUIHandler : MonoBehaviour
         SetRotation(2);
 
         SetLigh(1);
-        planeAnim.SetBool("isSelected", true);
-        carAnim.SetBool("isSelected", false);
-        armorAnim.SetBool("isSelected", false);
-
-        propler.enabled = true;
+        SetAnim(false, true, false);
     }
 
     public void VehicleButton()
@@ -82,11 +72,7 @@ public class MenuUIHandler : MonoBehaviour
         SetRotation(1);
 
         SetLigh(2);
-        carAnim.SetBool("isSelected", true);
-        planeAnim.SetBool("isSelected", false);
-        armorAnim.SetBool("isSelected", false);
-
-        propler.enabled = false;
+        SetAnim(false, false, true);
     }
 
     // ABSTRACTION
@@ -95,6 +81,7 @@ public class MenuUIHandler : MonoBehaviour
         myCar[n].transform.rotation = new Quaternion(0, 180, 0, 0);
     }
 
+    // ABSTRACTION
     private void SetLigh(int n)
     {
         foreach (var light in spotLights)
@@ -102,6 +89,15 @@ public class MenuUIHandler : MonoBehaviour
             light.enabled = false;
         }
         spotLights[n].enabled = true;
+    }
+
+    // ABSTRACTION
+    private void SetAnim(bool armor, bool plane, bool car)
+    {
+        armorAnim.SetBool("isSelected", armor);
+        carAnim.SetBool("isSelected", car);
+        planeAnim.SetBool("isSelected", plane);
+        propler.enabled = plane;
     }
 
     public void Exit()

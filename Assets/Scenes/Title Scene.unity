@@ -1061,6 +1061,8 @@ MonoBehaviour:
   - {fileID: 1420955084}
   rotationSpeed: 30
   propler: {fileID: 1430720301}
+  carAnim: {fileID: 808495365}
+  planeAnim: {fileID: 2129163728}
   armorAnim: {fileID: 116263690}
 --- !u!114 &237527445
 MonoBehaviour:
