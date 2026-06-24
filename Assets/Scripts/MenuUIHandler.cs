@@ -8,7 +8,7 @@ using UnityEditor;
 
 public class MenuUIHandler : MonoBehaviour
 {
-    [SerializeField] public TMP_InputField nameInputField;
+    [SerializeField] private TextMeshProUGUI chooseVehicleText;
     [SerializeField] private List<GameObject> myCar;
     [SerializeField] private List<Light> spotLights;
     [SerializeField] private float rotationSpeed = 25;
@@ -22,6 +22,8 @@ public class MenuUIHandler : MonoBehaviour
     {
         carAnim = myCar[2].GetComponent<Animator>();
         planeAnim = myCar[1].GetComponent<Animator>();
+
+        chooseVehicleText.gameObject.SetActive(false);
 
         if(MainManager.Instance.sceneNum == 1)
             ArmorButton();
@@ -42,6 +44,8 @@ public class MenuUIHandler : MonoBehaviour
     {
         if (MainManager.Instance.sceneNum != 0)
             SceneManager.LoadScene(MainManager.Instance.sceneNum); 
+        else
+            chooseVehicleText.gameObject.SetActive(true);
     }
 
     public void ArmorButton()
