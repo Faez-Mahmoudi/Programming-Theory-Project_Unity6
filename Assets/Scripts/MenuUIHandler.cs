@@ -33,15 +33,6 @@ public class MenuUIHandler : MonoBehaviour
 
     public void StartNew()
     {
-        if (MainManager.Instance.playerName == "")
-        {
-            MainManager.Instance.playerName = nameInputField.text;
-        }
-        else if (nameInputField.text != "" )
-        {
-            MainManager.Instance.playerName = nameInputField.text;
-        }
-
         if (MainManager.Instance.sceneNum != 0)
             SceneManager.LoadScene(MainManager.Instance.sceneNum); 
     }

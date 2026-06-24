@@ -6,7 +6,6 @@ public class MainManager : MonoBehaviour
     public static MainManager Instance{get; private set;}
     
     public int sceneNum = 0;
-    public string playerName;
 
     void Awake()
     {
