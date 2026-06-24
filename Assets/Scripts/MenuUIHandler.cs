@@ -22,6 +22,13 @@ public class MenuUIHandler : MonoBehaviour
     {
         carAnim = myCar[2].GetComponent<Animator>();
         planeAnim = myCar[1].GetComponent<Animator>();
+
+        if(MainManager.Instance.sceneNum == 1)
+            ArmorButton();
+        else if (MainManager.Instance.sceneNum == 2)
+            PlaneButton();
+        else if (MainManager.Instance.sceneNum == 3)
+            VehicleButton();
     }
 
     // Update is called once per frame
