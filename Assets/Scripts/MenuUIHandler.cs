@@ -33,8 +33,8 @@ public class MenuUIHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (MainManager.Instance.sceneNum != 0)
-            myCar[MainManager.Instance.sceneNum - 1].transform.Rotate(Vector3.up * Time.deltaTime * rotationSpeed);
+        if (MainManager.Instance.sceneNum == 1)
+            myCar[0].transform.Rotate(Vector3.up * Time.deltaTime * rotationSpeed);
     }
 
     public void StartNew()
