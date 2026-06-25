@@ -147,6 +147,7 @@ Transform:
   - {fileID: 401698}
   - {fileID: 471612}
   - {fileID: 2745430570165285832}
+  - {fileID: 5757768360834072206}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3306576
@@ -810,3 +811,65 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -117392840320652761, guid: 0a29e5b800b3746428b5645480341512, type: 3}
+--- !u!1001 &1271342931383061581
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 489324}
+    m_Modifications:
+    - target: {fileID: 6792277578371953347, guid: 1c1770b177a9d6d42994665c581bcda5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792277578371953347, guid: 1c1770b177a9d6d42994665c581bcda5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792277578371953347, guid: 1c1770b177a9d6d42994665c581bcda5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792277578371953347, guid: 1c1770b177a9d6d42994665c581bcda5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792277578371953347, guid: 1c1770b177a9d6d42994665c581bcda5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792277578371953347, guid: 1c1770b177a9d6d42994665c581bcda5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792277578371953347, guid: 1c1770b177a9d6d42994665c581bcda5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792277578371953347, guid: 1c1770b177a9d6d42994665c581bcda5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792277578371953347, guid: 1c1770b177a9d6d42994665c581bcda5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792277578371953347, guid: 1c1770b177a9d6d42994665c581bcda5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439366519334659092, guid: 1c1770b177a9d6d42994665c581bcda5, type: 3}
+      propertyPath: m_Name
+      value: ArmorBackFireParticle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1c1770b177a9d6d42994665c581bcda5, type: 3}
+--- !u!4 &5757768360834072206 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6792277578371953347, guid: 1c1770b177a9d6d42994665c581bcda5, type: 3}
+  m_PrefabInstance: {fileID: 1271342931383061581}
+  m_PrefabAsset: {fileID: 0}
