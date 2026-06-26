@@ -20,12 +20,6 @@ public abstract class PlayerController : MonoBehaviour
     public Camera mainCamera;
     public Camera hoodCamera;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
     // ABSTRACTION
     protected virtual void Move()
     {

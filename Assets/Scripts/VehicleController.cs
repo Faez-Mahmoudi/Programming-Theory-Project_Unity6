@@ -1,15 +1,18 @@
 using UnityEngine;
 
+// INHERITANCE
 public class VehicleController : PlayerController
 {
     private Rigidbody vehicleRb;
     [SerializeField] private float jumpForce = 2000;
     [SerializeField] private bool isOnGrand = true;
+    private Animator carAnim;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         vehicleRb = GetComponent<Rigidbody>();
+        carAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -36,10 +39,12 @@ public class VehicleController : PlayerController
     protected override void SpecialMove()
     {
         vehicleRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        carAnim.SetBool("isSelected", true);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         isOnGrand = true;
+        carAnim.SetBool("isSelected", false);
     }
 }
