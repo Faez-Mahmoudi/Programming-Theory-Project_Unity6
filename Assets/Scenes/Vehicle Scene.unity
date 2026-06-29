@@ -700,8 +700,8 @@ MonoBehaviour:
   turnSpeed: 45
   mainCamera: {fileID: 534669904}
   hoodCamera: {fileID: 1730358592}
-  isOnGrand: 1
   carAnim: {fileID: 1023955801}
+  vehicleJump: {fileID: 1023955805}
 --- !u!1001 &1023955792
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -758,6 +758,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2369556, guid: 09082afec7b5e824ca611a0cc3264bcd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399623105327882833, guid: 09082afec7b5e824ca611a0cc3264bcd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937596396223858774, guid: 09082afec7b5e824ca611a0cc3264bcd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -774,6 +786,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 194810, guid: 09082afec7b5e824ca611a0cc3264bcd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1023955801}
+    - targetCorrespondingSourceObject: {fileID: 194810, guid: 09082afec7b5e824ca611a0cc3264bcd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1023955805}
   m_SourcePrefab: {fileID: 100100000, guid: 09082afec7b5e824ca611a0cc3264bcd, type: 3}
 --- !u!1 &1023955793 stripped
 GameObject:
@@ -828,8 +843,8 @@ MonoBehaviour:
   turnSpeed: 45
   mainCamera: {fileID: 534669904}
   hoodCamera: {fileID: 1730358592}
-  isOnGrand: 1
   carAnim: {fileID: 1023955801}
+  vehicleJump: {fileID: 0}
 --- !u!95 &1023955801
 Animator:
   serializedVersion: 7
@@ -852,6 +867,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1023955805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023955793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5739c3dc305f15845b6e642db9b97bfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOnGrand: 1
 --- !u!1 &1134813760
 GameObject:
   m_ObjectHideFlags: 0

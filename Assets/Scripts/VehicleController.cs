@@ -3,16 +3,13 @@ using UnityEngine;
 // INHERITANCE
 public class VehicleController : PlayerController
 {
-    //[SerializeField] private Rigidbody vehicleRb;
-    //[SerializeField] private float jumpForce = 2000;
-    [SerializeField] private bool isOnGrand = true;
-    [SerializeField] private Animator carAnim;
+    //[SerializeField] private Animator carAnim;
+    [SerializeField] private VehicleJump vehicleJump;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //vehicleRb = GetComponent<Rigidbody>();
-        //carAnim = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -28,23 +25,16 @@ public class VehicleController : PlayerController
             SwitchCamera();
         }
 
-        if(Input.GetKeyDown(KeyCode.Space) && isOnGrand)
+        if(Input.GetKeyDown(KeyCode.Space))
         {
-            SpecialMove();
-            isOnGrand = false;
+            SpecialMove();   
         }  
     }
 
     // POLYMORPHISM
     protected override void SpecialMove()
     {
-        //vehicleRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        carAnim.SetBool("isSelected", true);
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        isOnGrand = true;
-        carAnim.SetBool("isSelected", false);
-    }
+        vehicleJump.isOnGrand = false;
+        vehicleJump.Jump();
+    } 
 }
