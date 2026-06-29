@@ -16,8 +16,8 @@ public class VehicleJump : MonoBehaviour
 
     void Update()
     {
-        if (isOnGrand)
-            carAnim.SetBool("isSelected", false);
+        //if (isOnGrand)
+          //  carAnim.SetBool("isSelected", false);
     }
 
     public void Jump()
@@ -29,6 +29,7 @@ public class VehicleJump : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        isOnGrand = true;    
+        isOnGrand = true; 
+        carAnim.SetBool("isSelected", false);   
     }
 }
