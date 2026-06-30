@@ -14,10 +14,7 @@ public class VehicleController : PlayerController
 
     // Update is called once per frame
     void Update()
-    {
-        //horizontalInput = Input.GetAxis("Horizontal");
-        //forwardInput = Input.GetAxis("Vertical");
-        
+    {   
         Move();
 
         if(Input.GetKeyDown(KeyCode.C))
@@ -31,8 +28,10 @@ public class VehicleController : PlayerController
         }  
     }
 
+    // POLYMORPHISM  
     protected override void Move()
     {
+        // Move the player to the left and right
         if (Input.GetKeyDown(KeyCode.A) && transform.position != -offset)
             transform.position -= offset;
         else if (Input.GetKeyDown(KeyCode.D) && transform.position != offset)
