@@ -47,7 +47,7 @@ public class VehicleSpawnManager : MonoBehaviour
         //{
             int obstacleIndex = Random.Range(0, obstaclePrefabs.Length);
             //Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
-            Instantiate(obstaclePrefabs[obstacleIndex], gameObject.transform.position, gameObject.transform.rotation);
+            Instantiate(obstaclePrefabs[obstacleIndex], gameObject.transform.position, obstaclePrefabs[obstacleIndex].transform.rotation);
         //}
     } 
 }
