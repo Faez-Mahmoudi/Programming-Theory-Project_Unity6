@@ -3,13 +3,16 @@ using UnityEngine;
 public class PlaneController : PlayerController //INHERITANCE
 {
     [SerializeField] private GameObject particle; 
+    [SerializeField] private PlaneRingManager ringManager;
     private float secondHorizontalInput;
     private bool isParticleActive = false;
+    private int ringcount = 0;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
        particle.gameObject.SetActive(false); 
+       ringcount = 0;
     }
 
     void Update()
@@ -48,5 +51,16 @@ public class PlaneController : PlayerController //INHERITANCE
     protected override void SpecialMove()
     {
         particle.gameObject.SetActive(!isParticleActive);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("___________________");
+        if (other.CompareTag("Ring"))
+        {
+            ringManager.SetNextRing(ringcount);
+            Debug.Log("___________________");
+            ringcount++;
+        }
     }
 }
