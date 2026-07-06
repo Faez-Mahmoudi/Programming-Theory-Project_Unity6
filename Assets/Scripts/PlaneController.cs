@@ -55,11 +55,9 @@ public class PlaneController : PlayerController //INHERITANCE
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("___________________");
         if (other.CompareTag("Ring"))
         {
             ringManager.SetNextRing(ringcount);
-            Debug.Log("___________________");
             ringcount++;
         }
     }
