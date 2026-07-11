@@ -26,7 +26,7 @@ public abstract class PlayerController : MonoBehaviour
         // Move the player forward
         transform.Translate(Vector3.forward * Time.deltaTime * forwardInput * m_Speed);
         // Rotate the player to left and right
-        transform.Rotate(Vector3.up * Time.deltaTime * horizontalInput * forwardInput * turnSpeed);
+        transform.Rotate(Vector3.up * Time.deltaTime * horizontalInput * turnSpeed);
     }
 
     protected abstract void SpecialMove();
