@@ -37,9 +37,17 @@ public class ArmorVehicle : PlayerController // INHERITTANCE
         if (transform.rotation != focalPoint.transform.rotation)
         {
             base.Move();
-                    
-            armor.transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed * -horizontalInput);
-            armorCamera.Rotate(-horizontalInput);
+
+            if(forwardInput >= 0)
+            {        
+                armor.transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed * -horizontalInput);
+                armorCamera.Rotate(-horizontalInput);
+            }
+            else if(forwardInput < 0)
+            {
+                armor.transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed * horizontalInput);
+                armorCamera.Rotate(horizontalInput);
+            }
         }
         else
             base.Move();
