@@ -6,13 +6,13 @@ public class ArmorVehicle : PlayerController // INHERITTANCE
     [SerializeField] private GameObject firePoint;
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private GameObject focalPoint;
-    //[SerializeField] private float armorSpeed = 50.0f;
     private float secondHorizontalInput;
+    private ArmorRotateCamera armorCamera;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        armorCamera = GameObject.Find("FocalPoint").GetComponent<ArmorRotateCamera>();
     }
 
     // Update is called once per frame
@@ -36,12 +36,10 @@ public class ArmorVehicle : PlayerController // INHERITTANCE
     {
         if (transform.rotation != focalPoint.transform.rotation)
         {
-            //Quaternion targetRotation = Quaternion.Euler(focalPoint.transform.eulerAngles.x, 0f, focalPoint.transform.eulerAngles.z);
-            //transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
-            Debug.Log("That's the point");
             base.Move();
                     
             armor.transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed * -horizontalInput);
+            armorCamera.Rotate(-horizontalInput);
         }
         else
             base.Move();
