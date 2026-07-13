@@ -2,14 +2,21 @@ using UnityEngine;
 
 public class ArmorBarrelController : MonoBehaviour
 {
-    [SerializeField] float armorBarrelSpeed = 10;
+    [SerializeField] float armorBarrelSpeed = 30f;
+
+    [SerializeField] float minAngle = -30f;
+    [SerializeField] float maxAngle = 15f;
+
+    float currentAngle = 0f;
 
     void Update()
     {
-        //Get user's input based on vertical
         float verticalInput = Input.GetAxis("Vertical1");
 
-        // Spin the vehicle's armor to up/down(ther's a bug here)
-        transform.Rotate(Vector3.left * Time.deltaTime * verticalInput * armorBarrelSpeed);
+        currentAngle += verticalInput * -armorBarrelSpeed * Time.deltaTime;
+
+        currentAngle = Mathf.Clamp(currentAngle, minAngle, maxAngle);
+
+        transform.localRotation = Quaternion.Euler(currentAngle, 0f, 0f);
     }
 }
