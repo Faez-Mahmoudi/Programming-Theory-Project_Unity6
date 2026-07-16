@@ -14,9 +14,14 @@ public class MoveForward : MonoBehaviour
         trail.enabled = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Car"))
+            Destroy(other.gameObject);
     }
 }
