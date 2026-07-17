@@ -23,5 +23,7 @@ public class MoveForward : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Car"))
             Destroy(other.gameObject);
+        
+        Destroy(gameObject);
     }
 }
