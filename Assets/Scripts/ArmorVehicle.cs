@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class ArmorVehicle : PlayerController // INHERITTANCE
 {
@@ -6,6 +7,7 @@ public class ArmorVehicle : PlayerController // INHERITTANCE
     [SerializeField] private GameObject firePoint;
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private GameObject focalPoint;
+    [SerializeField] private bool isFired;
     private float secondHorizontalInput;
     private ArmorRotateCamera armorCamera;
 
@@ -13,6 +15,7 @@ public class ArmorVehicle : PlayerController // INHERITTANCE
     void Start()
     {
         armorCamera = GameObject.Find("FocalPoint").GetComponent<ArmorRotateCamera>();
+        isFired = false;
     }
 
     // Update is called once per frame
@@ -24,11 +27,21 @@ public class ArmorVehicle : PlayerController // INHERITTANCE
 
         Move();
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && !isFired)
+        {
             SpecialMove();
+            isFired = true;
+            StartCoroutine(FireCountDown());
+        }
         
         if(Input.GetKeyDown(KeyCode.C))
             SwitchCamera();
+    }
+
+    IEnumerator FireCountDown()
+    {
+        yield return new WaitForSeconds(2);
+        isFired = false;
     }
 
     // POLYMORPHISM
