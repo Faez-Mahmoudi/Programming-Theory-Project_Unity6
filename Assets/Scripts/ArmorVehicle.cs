@@ -10,11 +10,14 @@ public class ArmorVehicle : PlayerController // INHERITTANCE
     [SerializeField] private bool isFired;
     private float secondHorizontalInput;
     private ArmorRotateCamera armorCamera;
+    private ArmorParticleHandler particleHandler;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         armorCamera = GameObject.Find("FocalPoint").GetComponent<ArmorRotateCamera>();
+        particleHandler = GameObject.Find("ParticleHandler").GetComponent<ArmorParticleHandler>();
+
         isFired = false;
     }
 
@@ -72,5 +75,15 @@ public class ArmorVehicle : PlayerController // INHERITTANCE
     protected override void SpecialMove()
     {
         Instantiate(projectilePrefab, firePoint.transform.position, firePoint.transform.rotation);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Car"))
+        {
+            Destroy(other.gameObject);
+
+            particleHandler.Explosion(other.gameObject.transform.position);
+        }
     }
 }
