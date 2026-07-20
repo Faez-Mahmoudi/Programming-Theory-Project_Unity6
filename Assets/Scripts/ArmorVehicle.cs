@@ -12,6 +12,10 @@ public class ArmorVehicle : PlayerController // INHERITTANCE
     private ArmorRotateCamera armorCamera;
     private ArmorParticleHandler particleHandler;
 
+    private float xBound = 150.0f;
+    private float zBound = 350.0f;
+    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -67,6 +71,15 @@ public class ArmorVehicle : PlayerController // INHERITTANCE
         }
         else
             base.Move();
+
+        if (transform.position.x > xBound)
+            transform.position = new Vector3(xBound, transform.position.y, transform.position.z);
+        if (transform.position.x < -xBound)
+            transform.position = new Vector3(-xBound, transform.position.y, transform.position.z);
+        if (transform.position.z < 0)
+            transform.position = new Vector3(transform.position.x, transform.position.y, 0.0f);
+        if (transform.position.z > zBound)
+            transform.position = new Vector3(transform.position.x, transform.position.y, zBound);
             
         // Spin the vehicle's armor to the right/left
         armor.transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed * secondHorizontalInput);
