@@ -10,8 +10,6 @@ public class VehicleController : PlayerController
     private int currentLane = 0;
     private float targetRotationY = 0f;
 
-    
-
     // Update is called once per frame
     void Update()
     {   
@@ -42,12 +40,12 @@ public class VehicleController : PlayerController
     protected override void Move()
     {
         // Move the player to the left and right
-        if (Input.GetKeyDown(KeyCode.A) && currentLane > -1)
+        if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) && currentLane > -1)
         {
             currentLane--;
             targetRotationY = -tiltAngle;
         }
-        else if (Input.GetKeyDown(KeyCode.D) && currentLane < 1)
+        else if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) && currentLane < 1)
         {
             currentLane++;
             targetRotationY = tiltAngle;

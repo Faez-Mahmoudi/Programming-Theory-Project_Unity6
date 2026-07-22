@@ -18,7 +18,7 @@ public class PlaneController : PlayerController //INHERITANCE
     void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
-        forwardInput = Input.GetAxis("Vertical");
+        forwardInput = Input.GetAxis("Vertical2");
         secondHorizontalInput = Input.GetAxis("Horizontal1");
 
         Move();
