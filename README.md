@@ -1,6 +1,6 @@
 # Programming Theory Project (Unity 6)
 
-![Cover Image](https://github.com/Faez-Mahmoudi/Data-Persistence-Project/blob/main/Screenshots/Data_Persistance_04.jpg)
+![Cover Image](https://github.com/Faez-Mahmoudi/Programming-Theory-Project_Unity6/blob/main/Screenshots/ProgrammingTheory_01.jpg)
 
 ## 🧱 Breakout Arena
 
