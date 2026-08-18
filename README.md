@@ -16,7 +16,7 @@ This project was created to practice and demonstrate **Unity gameplay mechanics,
 
 ## ▶️ Play Demo
 
-- [🎮 Unity Play Demo](https://play.unity.com/en/games/57a33d23-da92-4a03-868d-3a893759deb1/basket-battel) 
+- [🎮 Unity Play Demo](https://play.unity.com/en/games/6bbf9cd7-3a81-4b50-a4bc-59c4e1ab376b/programming-theory) 
 - [🌐 itch.io Demo](https://https://faez-mahmoudi.itch.io/prototype3)
 
 
