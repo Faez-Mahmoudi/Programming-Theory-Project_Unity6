@@ -22,7 +22,7 @@ This project was created to practice and demonstrate **Unity gameplay mechanics,
 
 ## ▶️ Gameplay Video
 
-- [Watch Gameplay Video](https://github.com/Faez-Mahmoudi/Data-Persistence-Project/blob/main/Videos/Data_Persistance_1080.mp4)
+- [Watch Gameplay Video](https://github.com/Faez-Mahmoudi/Programming-Theory-Project_Unity6/blob/main/Videos/ProgrammingTheory_720p_Mute.mp4)
 
 ---
 
