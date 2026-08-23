@@ -28,23 +28,22 @@ This project was created to practice and demonstrate **C# programming concepts, 
 
 ## 🧠 About
 
-This project demonstrates core Unity skills including:
+This project demonstrates core Unity and C# programming concepts, including:
 
-- Classic Breakout-style gameplay
-- Player paddle movement and control
-- Physics-based ball movement and bouncing
-- Collision detection between the ball, paddle, walls, and blocks
-- Breakable blocks and destruction mechanics
-- Multiple block layouts and level progression
-- Score tracking and high-score system
-- Player name and score data persistence
-- Game state and scene management
-- In-game UI and score display
-- Keyboard input and movement controls
-- Game restart and menu navigation
-- Basic gameplay balancing and polish
+* 🧩 Abstraction for defining common behaviors and functionality
+* 🔄 Polymorphism for allowing different objects to share common interfaces while implementing their own behaviors
+* 🧬 Inheritance for creating specialized classes based on shared functionality
+* 🔒 Encapsulation for controlling access to data and protecting object states
+* 🎮 Object-oriented gameplay programming
+* 🚗 Interactive 3D game objects and vehicles
+* 🎥 Camera and scene management
+* 🖥️ In-game UI and menu systems
+* 🎵 Background music and audio integration
+* ⌨️ Player input and interaction
+* 🧱 Unity GameObjects, components, and scripts
 
-The goal of this project is to practice and demonstrate **Unity gameplay mechanics, physics, collision detection, player input, UI systems, and data persistence using Unity and C#**, while creating a simple and playable Breakout-style arcade game.
+The goal of this project is to practice and demonstrate **Object-Oriented Programming (OOP) principles in Unity and C#**, with a focus on **Abstraction, Polymorphism, Inheritance, and Encapsulation**, while applying these concepts to a simple 3D game project.
+
 
 ---
 
