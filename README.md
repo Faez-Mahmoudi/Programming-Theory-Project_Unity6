@@ -2,14 +2,13 @@
 
 ![Cover Image](https://github.com/Faez-Mahmoudi/Programming-Theory-Project_Unity6/blob/main/Screenshots/ProgrammingTheory_01.jpg)
 
-## 🧱 Breakout Arena
+## ✈️ Programming Theory
 
-**Breakout Arena** is a classic brick-breaker game developed as part of the **Unity Junior Programmer Pathway (Data Persistence)**.
+**Programming Theory** is a simple 3D Unity project developed as part of the **Unity Junior Programmer Pathway (Programming Theory)**.
 
-Players control a paddle to keep the ball in play and break bricks to earn points and achieve a high score.
+The project features a small 3D environment with interactive gameplay elements, vehicles, UI, and background music.
 
-This project was created to practice and demonstrate **Unity gameplay mechanics, physics, player controls, UI, data persistence, and game design**.
-
+This project was created to practice and demonstrate **C# programming concepts, Unity scripting, object-oriented programming, game mechanics, UI, audio, and basic 3D game development**.
 
 
 ---
