@@ -49,15 +49,16 @@ The goal of this project is to practice and demonstrate **Object-Oriented Progra
 
 ## 🚀 Features
 
-* 🏓 Simple breakout-style arcade gameplay
-* 🎮 Player movement and control
-* 🧱 Brick-based level and collision system
-* ⚽ Physics-based ball movement and interactions
-* 💥 Brick destruction mechanics
-* 🏆 Score tracking system
-* 🎯 Keyboard-based gameplay controls
-* 🖥️ In-game UI and score display
-* 🔄 Restart and replay functionality
+* 🚗 Interactive 3D vehicles
+* ✈️ Multiple playable and interactive objects
+* 🎮 Player movement and object interaction
+* 🖥️ Main menu with Start and Exit options
+* 🎥 Third-person 3D camera setup
+* 🌍 Simple 3D environment
+* 🎵 Background music
+* 💡 Basic lighting and shadows
+* 🧱 Physics-based object interactions
+* 🔄 Scene and game state management
 
 
 ---
