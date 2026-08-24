@@ -65,11 +65,40 @@ The goal of this project is to practice and demonstrate **Object-Oriented Progra
 
 ## 🎮 How to Play
 
-* ⬅️➡️ Use the **Left / Right Arrow Keys** to move the paddle.
-* 🖱️ Keep the ball from falling by positioning the paddle underneath it.
-* 🧱 Break as many bricks as possible to increase your score.
-* ⚡ Hold **W** or **Shift** to speed up the gameplay.
-* 🏆 Try to beat the current High Score!
+### 🎥 Common Controls
+
+* **C** — Switch between camera views
+
+### 🚗 Car Game
+
+* ⬅️ **Left Arrow / A** — Move left
+* ➡️ **Right Arrow / D** — Move right
+* ␣ **Space** — Jump
+
+Use the movement keys to control the car and navigate through the level.
+
+### ✈️ Airplane Game
+
+* ⬆️ **Up Arrow / W** — Move forward
+* ⬇️ **Down Arrow / S** — Move backward
+* ⬅️ **Left Arrow / A** — Move left
+* ➡️ **Right Arrow / D** — Move right
+* ␣ **Space** — Activate wing particle effects
+
+Use the movement keys to control the airplane and press **Space** to activate the particle effects behind its wings.
+
+### 💥 Tank Game
+
+* ⬆️ **Up Arrow** — Move forward
+* ⬇️ **Down Arrow** — Move backward
+* ⬅️ **Left Arrow** — Turn left
+* ➡️ **Right Arrow** — Turn right
+* **W / S** — Aim the tank barrel up and down
+* **A / D** — Rotate the tank barrel left and right
+* ␣ **Space** — Fire
+
+Use the **Arrow Keys** to control the tank and **WASD** to aim the barrel. Press **Space** to fire.
+
   
 
 ---
